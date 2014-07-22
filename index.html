@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AniJS, Declarative handling library for CSS animations">
+    <link rel="shortcut icon" type="assets/image/x-icon" href="assets/img/favicon.png">
+    <title>AniJS Studio, Easy web animation prototypes everywhere</title>
+
+    <!-- Pure CSS Library -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure.css">
+    <link rel="stylesheet" href="bower_components/pure-extras/css/pure-extras.css">
+
+    <!-- Pure CSS Custom layout -->
+    <link rel="stylesheet" href="assets/css/main-grid.css">
+    <link rel="stylesheet" href="assets/css/layouts/marketing.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="lib/flat-icon/flaticon.css">
+
+    <!-- Syntax Highlight -->
+    <link rel="stylesheet" href="lib/highlight/markdown-highligth.css">
+
+    <!-- Animated CSS Animation Library -->
+    <link rel="stylesheet" href="lib/animationcss/animate.css">
+
+    <!-- Pure Menu -->
+    <link rel="stylesheet" href="lib/pure/css/side-menu-1.16.1.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/menu-collapse.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body>
+    <i class="flaticon-air1"></i>
+    <i class="flaticon-magic14"></i>
+    <i class="flaticon-magic4"></i>  
+    <div id="layout">
+
+
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        <div id="menu" class="">
+            <div class="pure-menu pure-menu-open">
+                <a class="pure-menu-heading" href="#">AniJS Studio</a>
+
+                <ul>
+                    <li class="pure-menu-selected"><a href="#welcome">Welcome</a>
+                    </li>
+                    <li><a href="#overview">Overview</a>
+                    </li>
+                    <li><a href="#tryit">Examples</a>
+                    </li>
+                    <li><a href="#usage">Usage</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="splash-container">
+            <div class="sponsorship" data-anijs="if: onRunFinished, on: $AniJSEventProvider, do: slideInRight animated">
+                <p style="">
+                   AniJS Studio needs an sponsorship. 
+                </p>
+                <p style="text-align:center;font-size:110%;margin-top:18px;margin-bottom:18px;">
+                   Would you like it?
+                </p>
+                <p style="text-align:right">
+                   <a href="mailto:darielnoel@gmail.com" style="text-decoration: underline;">contact us</a>
+                </p>
+                
+
+            </div>
+            <div class="balloon ball1" data-anijs="if: animationend, on: .splash-subhead, do: ball1-end, after: holdAnimClass;
+            if: transitionend, do: rubberBand; if: mouseover, do: rollIn, to: .ball2$.ball3$.ball4">
+                <i class="flaticon-rocket1 orange"></i> 
+            </div>
+            <div class="balloon ball2" data-anijs="if: animationend, on: .splash-subhead, do: ball2-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: scroll, on: window, do: hinge; if: mouseover, do: hinge, to: .ball3$.ball4$.ball1$.splash$.pure-menu-heading">
+                <i class="flaticon-wizards pink"></i> 
+            </div>
+            <div class="balloon ball3" data-anijs="if: animationend, on: .splash-subhead, do: ball3-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: shake, to: .balloon">
+                <i class="flaticon-magic4 green"></i> 
+            </div>
+            <div class="balloon ball4" data-anijs="if: animationend, on: .splash-subhead, do: ball4-end, after: holdAnimClass; if: transitionend, do: rubberBand; if: mouseover, do: rotateIn, to: .ball3$.ball2$.ball1">
+                <i class="flaticon-air1 white"></i> 
+            </div>
+            <div class="splash">
+                <h1 class="splash-head" data-anijs="if: onRunFinished, on: $AniJSEventProvider, do: swing animated, before:testFunction;if: click, do: hinge; if: animationend, on: .balloon, do: swing">AniJS Studio</h1>
+                <p class="splash-subhead" data-anijs="if: animationend, on: .splash-head, do: bounce">
+                    Add animations and interactions to any Web easily.
+                </p>
+                <p>
+                    <a href="https://chrome.google.com/webstore/detail/anijs-studio/alnnlebgnablnnbhidppfpcpmlopegib?hl=en" class="pure-button pure-button-primary">
+                        <i class="fa fa-download"></i>
+                        Install
+                    </a>
+                </p>
+
+                <p>
+                </p>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div id="overview" class="content">
+                <h2 class="content-head is-center" data-anijs="if: click, do: testingAnim">Overview</h2>
+
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+
+                        <video style="width:100%;height:100%; border: 1px solid #ccc" autoplay poster="assets/img/full_First_Frame.png" name="media" class="animated-gif" loop src="assets/video/full.mp4" preload="metadata">
+                        </video>
+                       <!--  <img class="pure-img" src="assets/img/overview.png"> -->
+                    </div>
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <p>
+                            <strong>AniJS Studio</strong> is a chrome extension that will allow you to create, test, and add animations prototypes to any webpage, or web application easily.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="tryit" class="ribbon l-box-lrg container-box pure-g">
+                <div id="try" class="pure-u-1 pure-u-med-1 pure-u-lrg-1 pure-g">
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <h3 class="content-subhead">
+                            <i class="fa fa-magic"></i>
+                            Intuitive User Interface
+                        </h3>
+                        <p>
+                            You will be able to add animations with a
+                            <span>few clicks</span> and without dealing with javascript or css code.
+                        </p>
+                    </div>
+
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <h3 class="content-subhead">
+                            <i class="fa fa-eye"></i>
+                            Instant visual feedback
+                        </h3>
+                        <p>
+                            You can see all changes in
+                            <span>real time</span>, in a
+                            <span>real enviroment</span> while you're working.
+                        </p>
+                    </div>
+
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <h3 class="content-subhead">
+                            <i class="fa fa-clipboard"></i>
+                            Easily integration
+                        </h3>
+                        <p>
+                            You can easily integrate it with your existing code,
+                            <span>just copy and paste</span> actions.
+                        </p>
+                    </div>
+                    <div class="l-box pure-u-1">
+                        <p>
+                            It is based on the
+                            <span>open source</span> library
+                            <strong><a href="http://anijs.github.io/" style="text-decoration: underline;color:white"> AniJS</a>
+                            </strong>, which is
+                            <span>compact</span> - around 7.7kb after gzipping, there is
+                            <span> no need for third party libraries</span> and supports all modern desktop and
+                            <span> mobile browsers</span>. You can find documentation and examples about it <a href="http://anijs.github.io/" style="text-decoration: underline;color:white"> here</a>.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="examples" class="content">
+                <h2 class="content-head is-center" data-anijs="if: click, do: testingAnim">Examples</h2>
+
+                <div class="pure-g">
+
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <a href="https://www.youtube.com/watch?v=yN75ZIITJGE&list=PLUVvd_W7urmg5iEmCATQS4ekARgyshUZa&index=3">
+                            <img class="pure-img" src="assets/img/overview.png">
+                        </a>
+                        <p style="text-align:center; margin:0">Happy Google</p>
+                    </div>
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <a href="https://www.youtube.com/watch?v=aSefo3jLExc&list=PLUVvd_W7urmg5iEmCATQS4ekARgyshUZa&index=4">
+                            <img class="pure-img" src="assets/img/applehappy.png">
+                        </a>
+                        <p style="text-align:center; margin:0">Apple is Moving</p>
+                    </div>
+                    <div class="l-box pure-u-1 pure-u-med-1-3 pure-u-lrg-1-3">
+                        <a href="https://www.youtube.com/watch?v=Xlz_3n-hpDA&list=PLUVvd_W7urmg5iEmCATQS4ekARgyshUZa&index=5">
+                            <img class="pure-img" src="assets/img/crazygoogleplay.png">
+                        </a>
+                        <p style="text-align:center; margin:0">Crazy Google Play</p>
+                    </div>
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <p style="text-align: center;">
+                            <a href="https://www.youtube.com/playlist?list=PLUVvd_W7urmg5iEmCATQS4ekARgyshUZa" class="pure-button button-small pure-button-primary">More</a> 
+                        </p>
+
+                    </div>
+                    <div class="pure-u-1 pure-u-med-1 pure-u-lrg-1">
+                        <p>
+                            Respond to the challenge and <a href="https://www.youtube.com/playlist?list=PLUVvd_W7urmg5iEmCATQS4ekARgyshUZa">submit</a> your own examples and share them with other developers.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div id="usage" class="content">
+                <h2 class="content-head is-center">Usage</h2>
+                <div class="section pure-g-r">
+                    <h4 class="content-head is-center">Open</h4>
+                    <div class="center">
+
+                        <div class="pure-u-1">
+                            <p>To access the AniJS Studio, open a web page or web app in Google Chrome. Either:</p>
+                            <ul>
+                            <li>Select the <strong>Chrome menu</strong> <i class="fa fa-bars" style="color:#aaa"></i> at the top-right of your browser window, then select
+                            <strong>Tools</strong> &gt; <strong>Developer Tools</strong>, or</li>
+                            <li>Right-click on any page element and select <strong>Inspect Element</strong>.</li>
+                            </ul>
+                            <p>The DevTools window will open at the bottom of your Chrome browser.</p>
+                            <p>After that you could be see the <strong>AniJS Studio Panel</strong>, click to open it.</p>
+                            <video style="width:85%;height:100%; border: 1px solid #ccc" autoplay poster="assets/img/open_First_Frame.png" name="media" class="animated-gif" loop src="assets/video/open.mp4" preload="metadata">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="section pure-g-r">
+                    <h4 class="content-head is-center">Adding Animations</h4>
+                    <div class="center">
+
+                        <div class="pure-u-1">
+                            <p>To add the animations <a href="http://anijs.github.io/#tryit">AniJS  sintax</a> are used. You can select this values inspecting current webpage or type directly into input boxes.
+                            </p>
+
+                            <video style="width:85%;height:100%; border: 1px solid #ccc" autoplay poster="assets/img/addinganimations_First_Frame.png" name="media" class="animated-gif" loop src="assets/video/addinganimations.mp4" preload="metadata">
+                            </video>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="section pure-g-r">
+                    <h4 class="content-head is-center" style="margin-top:20px">Save and Integration</h4>
+                    <div class="pure-u-1">
+                        <p>
+                            <strong>1</strong>- Include the CSS animation styles definition, also you can download this from <a href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css" target="_blank">
+                                        Animate.css
+                                    </a>
+                        </p>
+<!-- Syntax Highlight -->
+<div class="highlight highlight-xml"><pre><span class="nt">&lt;head&gt;</span>
+    <span class="c">&lt;!-- Animate.css library --&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"http://cdn.jsdelivr.net/animatecss/3.1.0/animate.css"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</pre>
+</div>
+<!-- End Syntax Highlight -->
+                        <p>
+                            <strong>2</strong>- Put the AniJS file on your page or load it from the <a href="http://www.jsdelivr.com/#!anijs" target="_blank">CDN</a>.
+                        </p>
+                        <!-- Syntax Highlight -->
+                        <div class="highlight highlight-xml" data-anijs="if: animationend, on: p.p-demo2, do: hinge"><pre><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">"anijs-min.js"</span><span class="nt">&gt;&lt;/script&gt;</span></pre>
+                        </div>
+                        <!-- End Syntax Highlight -->
+
+                        <p>
+                            <strong>3</strong>- Add the HTML Node below in some place of your page.
+                        </p>
+
+                        <!-- Syntax Highlight -->
+                        <div class="highlight highlight-xml"><pre><span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"anijsdeclaration"</span><span class="nt"> <span class="na">type=</span><span class="s">"hidden"</span><span class="nt"> <span class="na">data-anijs=</span><span class="s">""</span><span class="nt">&gt;</span>
+        </pre>
+                        </div>
+                        <!-- End Syntax Highlight -->
+                            <video style="width:85%;height:100%; border: 1px solid #ccc" autoplay poster="assets/img/integration_First_Frame.png" name="media" class="animated-gif" loop src="assets/video/integration.mp4" preload="metadata">
+                            </video>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="content-head is-center">History</h2>
+                <div class="section pure-g-r">
+                    <div class="center is-center">
+                        <div class="pure-u-1">
+                            <p>For detailed changelog, check <a href="https://github.com/anijs/studio/releases">Releases</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2 class="content-head is-center">Aknowledgement</h2>
+                <div class="section pure-g-r">
+                    <div class="center">
+                        <div class="pure-u-1">
+                            <p>To <a href="mailto:anisilv@gmail.com">Ms. Ana Silvia Tellería</a>, <a href="http://www.linkedin.com/pub/marisniulkis-lescaille/59/3a/55"> Ms. Marisniulkis Lescaille</a>,<a href="mailto:gallego@gmail.com">Mr. Yolier Galán</a>, <a href="mailto:voltusv@gmail.com">Mr. René González</a>, <a href="juliorubcan@gmail.com">Mr. Julio Cañizares</a>, <a href="https://twitter.com/caridy">Mr. Caridy Patino</a> and to all the persons that helped with this project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer l-box is-center">
+                Made with
+                <span class="bounceIn animated infinite">♥</span> by <a href="https://twitter.com/dariel_noel">@dariel_noel</a>.
+            </div>
+
+        </div>
+    </div>
+    <!-- YUI3 Framework -->
+    <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
+
+    <!-- AniJS Library -->
+    <script src="lib/anijs/anijs.js"></script>
+
+    <!-- Syntax Highlight -->
+    <script src="lib/highlight/highlight.pack.js"></script>
+    <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+    <script src="lib/pure/js/side-menu-1.16.1.js"></script>
+
+
+    <!-- App Scripts-->
+    <script src="config/appconfig.js"></script>
+    <script src="script/app.js"></script>
+
+    <!-- Google Analytics-->
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-44521541-6', 'auto');
+          ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
