@@ -5,6 +5,23 @@
 	display: inline-block;
 }
 
+<<<<<<< HEAD
+=======
+.sponsorship {
+	float: right;
+	margin-top: 10px;
+	background-color: #333;
+	padding: 0px 12px;
+	font-size: 79%;
+	line-height: 0em;
+}
+
+.sponsorship p{
+
+}
+
+
+>>>>>>> origin/master
 pre {
 	margin-top: -20px;
 	padding-top: 15px;
